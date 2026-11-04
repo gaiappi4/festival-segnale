@@ -3,11 +3,11 @@
 
 /* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
 :root {
-  --colore-primario: #245c49;
-  --colore-primario-scuro: #173f32;
-  --colore-sfondo: #f5f2e9;
-  --colore-testo: #202923;
-  --font-testo: Arial, Helvetica, sans-serif;
+  --colore-primario: #166534;
+  --colore-primario-scuro: #14532d;
+  --colore-sfondo: #ffffff;
+  --colore-testo: #000000;
+  --font-testo: "Hans Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-titoli: Georgia, "Times New Roman", serif;
 }
 
@@ -45,7 +45,7 @@ a:focus-visible {
 
 .site-header {
   padding: 1.25rem 0;
-  border-bottom: 4px solid #d8d2c5;
+  border-bottom: 4px solid #14532d;
 }
 
 .brand {
@@ -156,7 +156,23 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Qui inseriremo la regola .event-grid durante la demo. */
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 .event-card {
   margin-bottom: 1.5rem;
@@ -173,7 +189,7 @@ h3 {
 }
 
 .event-body {
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
 .event-body p:last-child {
